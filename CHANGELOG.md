@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.1 — 2026-10-25
+
+- Docs: make the opencode v2 requirement explicit (opencode v1.x is not supported).
+
 ## 0.1.0 — 2026-10-25
 
 Initial release.

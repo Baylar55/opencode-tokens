@@ -3,11 +3,10 @@
 [![npm](https://img.shields.io/npm/v/opencode-tokens)](https://www.npmjs.com/package/opencode-tokens)
 [![CI](https://github.com/Baylar55/opencode-tokens/actions/workflows/ci.yml/badge.svg)](https://github.com/Baylar55/opencode-tokens/actions/workflows/ci.yml)
 [![node](https://img.shields.io/node/v/opencode-tokens)](https://nodejs.org)
-[![license](https://img.shields.io/npm/l/opencode-tokens)](LICENSE)
 
-Track and display [opencode](https://opencode.ai) token usage and cost statistics from your terminal.
+Track and display [opencode v2](https://opencode.ai) token usage and cost statistics from your terminal.
 
-Reads opencode's local database directly, read-only. No API keys, no network, no dependencies — just Node.js.
+Reads opencode v2's local database directly, read-only. No API keys, no network, no dependencies — just Node.js.
 
 ```
 $ opencode-tokens --since 6w --by week
@@ -35,12 +34,13 @@ $ opencode-tokens --since 6w --by week
 - **Flexible ranges** — `--days`, `--since`, `--until`, or `--since all`.
 - **Period comparison** (`--compare`) — percentage change against the previous period.
 - **Export** — `--json` for scripts and dashboards, `--csv` for spreadsheets.
-- **Safe** — opens the database read-only; works while opencode is running.
+- **Safe** — opens the database read-only; works while opencode v2 is running.
 
 ## Requirements
 
+- **opencode v2** — sessions are read from the v2 database (`opencode.db`, `session_message` table).
+  opencode v1.x stores history differently and is not supported.
 - Node.js **22.13+** (uses the built-in `node:sqlite`)
-- opencode **v2+** (stores history in `opencode.db`)
 
 ## Install
 
@@ -127,7 +127,7 @@ opencode v2 stores every session in a SQLite database:
 If `XDG_DATA_HOME` is set, `$XDG_DATA_HOME/opencode/opencode.db` is used instead. Use `--db` for anything else.
 
 Each completed assistant response counts as one **call**. **Total** is
-`input + output + reasoning + cache read + cache write`. **Cost** is what opencode recorded for the
+`input + output + reasoning + cache read + cache write`. **Cost** is what opencode v2 recorded for the
 response; free models and subscription plans record `0`, which is shown as `-`.
 
 ## JSON output
