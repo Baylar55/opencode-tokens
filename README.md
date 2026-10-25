@@ -153,6 +153,18 @@ node bin/opencode-tokens.js    # run from source
 npm link                       # install your checkout as the global command
 ```
 
+### Releasing
+
+Publishing is automatic. Bump the version and push to `main`:
+
+```bash
+npm version patch   # or minor / major; commits and tags the new version
+git push --follow-tags
+```
+
+CI runs the tests, publishes the new version to npm (with provenance) and creates the GitHub release.
+Commits that don't change the version only run the tests. Requires an `NPM_TOKEN` repository secret.
+
 ## License
 
 MIT. See [LICENSE](LICENSE).
