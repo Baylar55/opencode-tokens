@@ -1,0 +1,40 @@
+{
+  "name": "opencode-tokens",
+  "version": "0.1.0",
+  "description": "Track and display opencode token usage and cost statistics from your local opencode database",
+  "type": "module",
+  "bin": {
+    "opencode-tokens": "bin/opencode-tokens.js"
+  },
+  "files": [
+    "bin",
+    "src"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "prepublishOnly": "npm test"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "keywords": [
+    "opencode",
+    "tokens",
+    "usage",
+    "cost",
+    "llm",
+    "ai",
+    "cli",
+    "statistics"
+  ],
+  "author": "Baylar Sadigov",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Baylar55/opencode-tokens.git"
+  },
+  "homepage": "https://github.com/Baylar55/opencode-tokens#readme",
+  "bugs": {
+    "url": "https://github.com/Baylar55/opencode-tokens/issues"
+  }
+}
