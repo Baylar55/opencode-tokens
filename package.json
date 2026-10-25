@@ -1,6 +1,6 @@
 {
   "name": "opencode-tokens",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Track and display opencode v2 token usage and cost statistics from your local opencode database",
   "type": "module",
   "bin": {
